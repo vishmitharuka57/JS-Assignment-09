@@ -1,0 +1,40 @@
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    background-color: black;
+}
+
+.main-box{
+    width: 80vw;
+    height: 10vh;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    gap: 10px;
+}
+.small-box{
+    width: 15vw;
+    border: 2px solid white;
+}
+
+.btn{
+    width: 90px;
+    height: 35px;
+}
+
+#btn-start{
+    position: absolute;
+    left: 45%;
+    top: 65%;
+}
+
+#btn-stop{
+    position: absolute;
+    left: 55%;
+    top: 65%;
+}

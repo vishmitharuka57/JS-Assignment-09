@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment-09</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+<section id="main" class="main-box" >
+    <div id="sec1" class="small-box" style="background-color:white"> </div>
+    <div id="sec2" class="small-box" style="background-color:pink"> </div>
+    <div id="sec3" class="small-box" style="background-color:hotpink"> </div>
+    <div id="sec4" class="small-box" style="background-color:red"> </div>
+    <div id="sec5" class="small-box" style="background-color:hotpink"> </div>
+    <div id="sec6" class="small-box" style="background-color:pink"> </div>
+    <div id="sec7" class="small-box" style="background-color:white"> </div>
+</section>
+
+
+<button type="button" id="btn-start" class="btn" style="background-color:dodgerblue">Start</button>
+<button type="button" id="btn-stop" class="btn" style="background-color:red">Stop</button>
+
+<audio src="assets/audio/Knight%20Rider%20Sms%20!%20Knight%20Rider%20!%20Theme.mp3" id="audio"></audio>
+
+<script src="assets/lib/jQuery/jquery-3.6.4.min.js"></script>
+<script>
+
+ function changeColor(){
+     let colour1 = $("section>div:nth-child(1)").css('background-color');
+     let colour2 = $("section>div:nth-child(2)").css('background-color');
+     let colour3 = $("section>div:nth-child(3)").css('background-color');
+     let colour4 = $("section>div:nth-child(4)").css('background-color');
+     let colour5 = $("section>div:nth-child(5)").css('background-color');
+     let colour6 = $("section>div:nth-child(6)").css('background-color');
+     let colour7 = $("section>div:nth-child(7)").css('background-color');
+
+     $("section>div:nth-child(2)").css('background-color',colour1);
+     $("section>div:nth-child(3)").css('background-color',colour2);
+     $("section>div:nth-child(4)").css('background-color',colour3);
+     $("section>div:nth-child(5)").css('background-color',colour4);
+     $("section>div:nth-child(6)").css('background-color',colour5);
+     $("section>div:nth-child(7)").css('background-color',colour6);
+     $("section>div:nth-child(1)").css('background-color',colour7);
+ }
+
+ let timerId
+ $("#btn-start").click(function () {
+     $('#audio')[0].play();
+     clearInterval(timerId);
+     timerId =   setInterval(changeColor,150);
+ });
+
+ $("#btn-stop").click(function () {
+     $('#audio')[0].pause();
+     clearInterval(timerId);
+ });
+
+</script>
+</body>
+</html>
